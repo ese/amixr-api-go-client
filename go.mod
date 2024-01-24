@@ -1,4 +1,4 @@
-module github.com/grafana/amixr-api-go-client
+module github.com/ese/amixr-api-go-client
 
 go 1.16
 
