@@ -51,6 +51,7 @@ type Client struct {
 	Teams                 *TeamService
 	Webhooks              *WebhookService
 	UserNotificationRules *UserNotificationRuleService
+	ResolutionNotes       *ResolutionNoteService
 }
 
 func NewWithGrafanaURL(base_url, token, grafana_url string) (*Client, error) {
@@ -111,6 +112,7 @@ func newClient(url, grafana_url string) (*Client, error) {
 	c.Teams = NewTeamService(c)
 	c.Webhooks = NewWebhookService(c)
 	c.UserNotificationRules = NewUserNotificationRuleService(c)
+	c.ResolutionNotes = NewResolutionNoteService(c)
 
 	return c, nil
 }
